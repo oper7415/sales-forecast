@@ -34,11 +34,7 @@ target_col = targets[target_option]
 # 학습 데이터 분리
 X = df[features]
 y = df[target_col]
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-# 모델 학습
-model = RandomForestRegressor(random_state=42)
-model.fit(X_train, y_train)
+model.fit(X, y)
 
 # 예측
 df['예측값'] = model.predict(X)
