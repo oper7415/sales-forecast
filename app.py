@@ -14,6 +14,8 @@ def load_data():
     return df
 
 df = load_data()
+df = df.dropna()
+
 
 st.title("📈 매출·신환·내원 예측 대시보드")
 
